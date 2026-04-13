@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
+import { toast } from "react-toastify";
 
 function EditCrash() {
   const { id } = useParams();
@@ -97,6 +98,7 @@ function EditCrash() {
       setError(validationError);
       return;
     }
+    toast.success("Crash updated successfully!");
 
     setSubmitting(true);
 

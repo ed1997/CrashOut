@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CrashOut.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ad52868f156d957a14ceb9fd70f3c6402dd51da2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9c70bdba469ff32cbfae3d933c0edd0b635923e7")]
 [assembly: System.Reflection.AssemblyProductAttribute("CrashOut.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CrashOut.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

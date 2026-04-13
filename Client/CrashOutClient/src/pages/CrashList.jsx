@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
+import { toast } from "react-toastify";
 
 function CrashList() {
   const [reports, setReports] = useState([]);
@@ -28,7 +29,7 @@ function CrashList() {
         setReports(data);
       } catch (err) {
         console.error(err);
-      }
+      }   
     };
 
     if (token) fetchReports();
@@ -42,6 +43,7 @@ function CrashList() {
           Authorization: `Bearer ${token}`,
         },
       });
+      toast.success("Crash deleted successfully!");
 
       setReports((prev) => prev.filter((r) => r.id !== id));
     } catch (err) {
@@ -69,7 +71,7 @@ function CrashList() {
             <div key={crash.id} style={styles.card}>
               <div>
 
-                {/* ✅ IMAGE ADDED HERE */}
+                {/* IMAGE ADDED HERE */}
                 {crash.imageUrl && (
                   <img
                     src={crash.imageUrl}

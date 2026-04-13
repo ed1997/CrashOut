@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
+import { toast } from "react-toastify";
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -60,6 +61,7 @@ function Login() {
 
     if (res.ok) {
       login(data.token, data.user);
+      toast.success("Welcome back!");
       navigate("/crashes");
       return;
     }

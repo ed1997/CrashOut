@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 function Register() {
   const [name, setName] = useState("");
@@ -50,6 +51,7 @@ function Register() {
       setError(validationError);
       return;
     }
+    toast.success("Registered successfully!");
 
     setSubmitting(true);
 

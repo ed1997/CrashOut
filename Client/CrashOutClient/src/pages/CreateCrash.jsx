@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
+import { toast } from "react-toastify";
 
 function CreateCrash() {
   const [title, setTitle] = useState("");
@@ -66,6 +67,7 @@ function CreateCrash() {
 
       if (!res.ok) throw new Error("Failed to create crash");
 
+      toast.success("Crash created successfully!");
       navigate("/crashes");
     } catch (err) {
       console.error(err);
