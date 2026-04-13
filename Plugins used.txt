@@ -1,0 +1,4 @@
+Technologies & Libraries:
+- React Router
+- React Toastify (notifications)
+- Image URL uploading
